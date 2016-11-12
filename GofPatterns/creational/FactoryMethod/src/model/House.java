@@ -7,14 +7,15 @@ public abstract class House {
 	private List<Material> materials = new ArrayList<Material>(); 
 	
 	public House(){
-		Material material1 = new Material();
-		Material material2 = new Material();
-		
-		materials.add(material1);
-		materials.add(material2);
 	}
 	
 	protected abstract Material factoryMethod();
+	
+	public void addMaterial(){
+		Material material = new Material();
+		materials.add(material);
+	}
+	
 	public int getNumberOfMaterials(){
 		return materials.size();
 	}
